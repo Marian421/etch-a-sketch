@@ -1,0 +1,27 @@
+.container {
+    width: 50vw;
+    height: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;  
+}
+
+.square {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-width: 1px;
+    border-color:grey;
+    border-style:solid;
+}
+
+.page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
