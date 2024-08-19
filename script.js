@@ -44,7 +44,9 @@ function createSquares(gridSize){
             square.addEventListener('mouseover', () =>
             {
                 square.setAttribute('style', 'background-color:blue');
-            });
+                square.style.backgroundColor = random_rgba();
+                
+            }); 
             row.appendChild(square);
         }
         container.appendChild(row);
@@ -57,6 +59,12 @@ function deleteGrid() {
         elements[0].parentNode.removeChild(elements[0]);
     }
 }
+
+function random_rgba() {
+    var o = Math.round, r = Math.random, s = 255;
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ')';
+}
+
 createSquares(size);
 //deleteGrid();
 
